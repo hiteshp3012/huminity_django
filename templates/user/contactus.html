@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .form-control
+{
+margin-bottom:8px;
+}
+.txta
+{
+min-height:80px;
+}
+.contact-form
+{
+ width:43%;
+ margin: 1%;
+ padding: 2%;
+ float: left;
+ background-color: white;
+ border-radius: 15px;
+ }
+ .clearfix
+{
+ clear:both;
+ float:none;
+}
+.contact
+{
+ background-image: url({% static 'images/1.jpg' %});
+ padding: 4% 0;
+}
+</style>
+<section class="contact">
+    <div class="container">
+        <h1 class="text-center"><b style="color:yellow;">Contact </b> <b style="color:blue;">Us</b><i class=" fa fa-phone" style="color:blue;"></i></h1>
+    <div class="contact-form">
+        <form method="post" autocomplete="off">
+            {% csrf_token %} <!--- cross site reforgery --->
+            {% if s %}
+            <div class="alert alert-success">
+                Thanks for enquiry...
+            </div>
+            {% endif %}
+            <label for="">First Name</label>
+            <input type="text"  required class="form-control" placeholder="Enter your First Name..." required name="fname"/>
+
+            <label for="">Last Name</label>
+            <input type="text" required class="form-control" placeholder="Enter your Last Name..." required name="lname"/>
+
+            <label for="">Email</label>
+            <input type="email"  required class="form-control" placeholder="Enter your Email..." required  name="email"/>
+
+            <label for="">Mobile No.</label>
+            <input type="number" required class="form-control" placeholder="Enter your Mobile No. ..." required  name="mobile"/><br/>
+
+            <div class="row">
+            <div class="text col-8">
+            <label for="">Address</label>
+            <input type="text" required class="form-control" placeholder="Enter your Address..." required  name="add"/>
+            </div>
+            <div class="text col-4">
+                <label for="">Zip Code</label>
+                <input type="number" required class="form-control" placeholder="Enter ur Zip Code..." required  name="zip"/>
+            </div>
+            </div>
+
+            <label for="">Message</label>
+            <textarea class="form-control" name="msg" style="min-height:80px;resize:none;" placeholder="Enter Your Message.." required></textarea>
+                <input type="submit" value="Save" class="btn btn-info"/>
+        </form>
+    </div>
+    <div class="contact-form">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.1615098718325!2d80.96419201409861!3d26.898368867184864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39995785d5f7f1a5%3A0xffa47f1efe103f0d!2sTechpile%20Technology%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1633299970297!5m2!1sen!2sin" width="500" height="500px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+    </div>
+    <div class="clearfix"></div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row  p-5" style="background-image:url({% static 'images/3.jpg' %})">
+       <h1 class="text-center"><b style="color:yellow;">Donate </b> <b style=" color:red;">Now </b><i class="fa fa-user" style="color:blue;"></i></h1>
+   <div class="col-sm-3"></div>
+    <div class="col-sm-6 bg-secondary " style="border-radius:20px; opacity:.8; border:2px solid yellow;">
+
+        <div class="row ">
+            <div class="col-sm-5 p-3 mx-4">
+<form method="post">
+    {% csrf_token %}
+                     {% if S %}
+                    <div class="alert alert-success">
+                       Thanks for enquiry..
+                    </div>
+{% endif %}
+     <h5 style="margin-left:10px;">Name:</h5>
+    <input type="text" placeholder="Enter your name" name="name" style="width:500px; height:40px; border-radius:5px; border:none; padding:10px;margin:10px;"/><br>
+
+     <h5 style="margin-left:10px;">Email Id:</h5>
+    <input type="email" placeholder="Enter your email id" name="email" style="width:500px; height:40px; border-radius:5px; border:none; padding:10px;margin:10px;"/><br>
+    <h5 style="margin-left:10px;">Mobile:</h5>
+    <input type="number" placeholder="Enter your mobile no" name="mobile" style="width:500px; height:40px; border-radius:5px; border:none; padding:10px;margin:10px;"/><br>
+    <h5 style="margin-left:10px;">City</h5>
+    <select style="width:500px; height:40px; border-radius:5px; border:none; padding:10px;margin:10px;" name="city"><br/>
+        <option>Select the city....</option>
+        <option>Lucknow</option>
+        <option>Delhi</option>
+        <option>mumbai</option>
+        <option>Raibareli</option>
+
+
+    </select><br>
+    <h5>Address</h5>
+            <textarea class="form-control" name="msg" style="width:500px; height:150px; border-radius:5px; border:none; padding:10px;margin:10px;" placeholder="Enter Your Address.." required></textarea>
+
+
+         <h5 style="margin-left:10px;">Occupation</h5>
+    <input type="text" placeholder="Enter your Occupation " name="occupation" style="width:500px; height:40px; border-radius:5px; border:none; padding:10px;margin:10px;"/><br>
+
+    <h5 style="margin-left:10px;">Amount</h5>
+    <select style="width:500px; height:40px; border-radius:5px; border:none; padding:10px;margin:10px;" name="Amount"><br/>
+
+    </select><br>
+
+
+    <input type="submit" value="Donate Now" name="btn" style="width:500px; height:40px; border-radius:5px; border:none; padding:10px; margin:10px; background:blue;color:white;font-weight:bold;""/>
+
+
+
+</form>
+            </div>
+
+            </div>
+            </div>
+{% endblock %}

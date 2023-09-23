@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{% load static %}
+{%block contact%}
+<div class="h2 text-center">Video Gallery<i class="fa fa-live"></i></div>
+<div class="col-sm-1">
+    <div class="col-sm-10">
+        {% if video %}
+        {% for x in video %}
+        <div class="col-sm-4">
+            <div class="card">
+        <div class="card" style="width: 18rem;">
+  <iframe style="min-height:
+  <div class="card-body"
+    <h5 class="card-title">{{x.vtitle}}</h5>
+    <i class="btn btn-outline-info">Posted Date : {{x.vdate}}</i>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+    </div></div>
+{% endblock%}

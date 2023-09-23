@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div clas="row">
+    <div class="h2 text-center text-warning">Image<b class="text-light">Gallery</b> <i class="fa fa-image"></i></div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <div class="row">
+            {% if d %}
+            {% for x in d%}
+            <div class="col-sm-3" p-3>
+                <div class="card w-100">
+  <img src="/{{x.gpic}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <a href="#" class="btn btn-outline-warning">{{x.pdes}}</a>
+  </div>
+</div>
+            </div>
+            {% endfor%}
+            {% endif%}
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="row">
+  <div class="h2 text-center">Our Event</div>
+  <div class="col-sm-1"></div>
+  <div class="col-sm-10">
+
+    <div class="row">
+      {% if event%}
+      {% for x in event%}
+      <div class="col-sm-3">
+        <div class="card">
+  <img src="/{{x.epic}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{x.city}}</h5>
+    <p class="card-text">
+      <b>{{x.etitle}}</b>
+    <p> {{x.purpose}}</p>
+    <b class="btn btn-outline-dark">{{x.sthanks}} </b><br>
+    <i class="text-muted">{{x.edate}}</i>
+    </p>
+
+  </div>
+</div>
+      </div>
+      {% endfor%}
+    {% endif %}
+    </div>
+
+  </div>
+  <div class="col-sm-1"></div>
+</div>
+
+
+{% endblock %}

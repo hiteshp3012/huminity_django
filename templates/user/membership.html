@@ -1,0 +1,78 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<style>
+body{
+background:url("photo/ab/a4.jpg");
+background-size:cover;
+}
+#Register{
+min-height:250px;
+width:400px;
+background:rgba(0,0,0,.5);
+color:white;
+margin:150px auto;
+padding:25px;
+text-align:center;
+text-size:30px;
+box-sizing:border-box;
+}
+.text{
+height:45px;
+width:100%;
+margin-top:20px;
+margin-bottom:5px;
+padding-left:5px;
+box-sizing:border-box;
+background:rgba(0,0,0,.5);
+border:2px solid white;
+border-top:none;
+border-right:none;
+border-left:none;
+color:white;
+}
+.btn{
+height:45px;
+width:100%;
+border:2px solid white;
+background:rgba(0,0,0,.5);
+color:white;
+}
+</style>
+<div class="row contact">
+    <div class="h2 text-center" style="font-size:50px;">Member <b class="text-info">Ship <i class="fa fa-users"></i></b></div>
+<div class="col-sm-1"></div>
+<div class="col-sm-10 bg-secondary" style="min-height:400px;">
+    <div class="row">
+        <div class="col-sm-5 p-4">
+            <form method="post">
+                {% csrf_token %}<!-- cross site reforgery-->
+                {% if S %}
+                <div class="alert alert-success">
+                    Thanks for applying membership.......
+                </div>
+                {% endif%}
+
+                <b style="font-size: 20px;">Name<input type="text" name="name"  required class="form-control" placeholder="Enter Your Name.."/>
+                Date of Birth<input type="date" name="Dob"  required class="form-control" placeholder="Enter Your Dob.."/>
+                Gender <input type="radio" id="male" value="Male" name="a" style="height:20px; width:20px;"/><label for="male">Male</label>
+                    <input type="radio" id="female" value="Female" name="a" style="height:20px; width:20px;"/>
+                <label for="female" >Female</label><br/>
+                Email<input type="email" name="email" required class="form-control" placeholder="Enter Your Email"/>
+                Mobile<input type="number" name="mobile"  required class="form-control" placeholder="Enter Your Mobile.."/>
+                city<input type="city" name="city"  required class="form-control" placeholder="Enter Your City Name.."/>
+                Address<input type="text" name="address" required class="form-control" placeholder="Enter Your Address"/>
+                Profession
+                <input type="text" name="profession" required class="form-control" placeholder="Your Profession"/>
+                <br/><input type="submit" value="Save" class="btn btn-warning"/></b>
+            </form>
+        </div>
+        <div class="col-sm-7 py-5"><img src="{% static 'images/10.jpg' %}" style="max-height:580px;" class="d-block w-100" alt="..."></div>
+    </div>
+</div>
+<div class="col-sm-1"></div>
+</div>
+
+
+
+{% endblock %}

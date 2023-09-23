@@ -1,0 +1,340 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<!-- start slider -->
+  <div class="row slider">
+        <div class="col-sm-12 p-2">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/main1.jpg' %}" style="max-height:580px;" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h1 style="color:red; font-size:50px;">To Feed Children For a Week</h1>
+        <p>Every good act as humanity A man's true wealth hereafter is the good that he does i  this world to his fellows</p>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/5.jpg' %}" style="max-height:580px;" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h1 style="color:red; font-size:50px;">Hand To Make Better Life For Clildren</h1>
+        <p>Every good act is humanity. A man's true wealth hereafter is the good that he does is this world to his fellows.</p>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/4.jpg' %}" style="max-height:580px;" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h1 style="color:red; font-size:50px;">A Little Amount Of Water Save Life</h1>
+        <p>Every good act is Humanity. A man's true wealth hereafter is the good that he does in this world to his fellows.</p>
+
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+        </div>
+    </div>
+ <!-- end slider -->
+<!---
+Notification
+--->
+<div class="row">
+	<div class="col-sm-12 alert alert-danger">
+		<marquee>
+			{% if d%}
+			{% for x in d%}
+			<img src="{% static 'images/17.jpg' %}" style="max-height:25px;"/>
+		    {{x.news}}
+			{% endfor%}
+
+			{% endif%}
+		</marquee>
+
+	</div>
+
+</div>
+<!--- Close--->
+
+
+    <div class="row category">
+         <!-- start category -->
+        <div class="col-sm-12 text-center">
+            <h1><U>WELCOME TO <B STYLE="color:red;">Humanity</B> </U></h1>
+            <P>We are humanity/ non-profit/ Fundraising/ NGO organizations. Our humanity activities are taken place around the world
+            ,let contribute to the,m with us by you hand to be a better life.</P>
+
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="col-sm-12 border p-2 " style="min-width:200px;">
+                        <img src="{% static 'images/5.jpg' %}" style="min-width:180px; min-height:200px;" class="img-thumbnail p-3"/>
+                        <div class="h5 text-center"><h1 style="color:red;"><i class="fa fa-users">Support Peoples</i></h1>
+                        <p>All children are our future. They all deserve our love. Join us to feed,teach,protect, and nurture children
+                        in America...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                      <div class="col-sm-12 border p-2 " style="min-width:200px;">
+                        <img src="{% static 'images/6.jpg' %}" style="min-width:180px; min-height:200px;" class="img-thumbnail p-3"/>
+                        <div class="h5 text-center"><h1 style="color:red;"> <i class="fa fa-paw">Save Wild Animals</i> </h1>
+                        <p>Who loves or pursues or desires to obtain pain of itself, because it is all pain, but occasionally circumstances occur which toil...</p></div>
+                    </div>
+                </div>
+                <div class="col-sm-4 ">
+                      <div class="col-sm-12 border p-2 " style="min-width:200px;">
+                        <img src="{% static 'images/7.jpg' %}" style="min-width:180px; min-height:200px;" class="img-thumbnail p-3"/>
+                          <div class="h5 text-center"><h1 style="color:red;"> <i class="fa fa-globe">Protect Our Planet</i></h1>
+                          <p>Pleasure and praising pain was born and I will give you a complete account of the ut system expound the actual teachings...</p></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+         <!-- end category -->
+    </div>
+
+<div class="row newproduct py-3">
+
+
+
+     <div class="text-center"><u></u><h1>ABOUT OUR <b style="color:red;">HUMANITY</b> </h1></div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10 offer my-5 bg-light p-5" >
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="fs-2" STYLE="color:blue;">What We Do</div>
+                    <p>Idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actually teachings of the great explorer of the truth.</p>
+
+
+                    <div class="fs-2 mt-3" style="color:blue;">How It Works</div>
+                    <p> Who loves or pursues or desires to obtain pain of itself, because it is pain, because occasionally circumstances occur which toil and pain can procure him some great pleasure.</p>
+                    <p>When you give to Our humanity, you know your donation is making a difference. Whether you are supporting one of our Signature Programs or our carefully curated list of Gifts That Give More, our professional staff works hard every day to ensure every dollar has impact for the cause of your choice.</p>
+
+                </div>
+                <div class="col-sm-4">
+                    <center>
+                        <img src="{% static 'images/8.jpg'%}" style="min-width:180px; min-height:200px;" class="img-fluid"/>
+                         <img src="{% static 'images/9.jpg'%}" style="min-width:180px; min-height:200px" class="img-fluid"/>
+                        </center>
+                </div>
+                <div class="col-sm-4">
+
+                    <div class="fs-2" style="color:red;">Years of Experience</div>
+                    <p>We partner with over 320 amazing projects worldwide, and have given over $150 million in cash and product grants to other groups since 2011. We also operate our own dynamic suite of Signature Programs.</p>
+
+                    <div class="fs-2 mt-3"></div>
+                    <i class="fa fa-hand-o-right" style="color:red">This mistaken idea of denouncing pleasure</i>
+                    <i class="fa fa-hand-o-right" style="color:red">Master-builder of human happiness</i>
+                    <i class="fa fa-hand-o-right" style="color:red">Occasionally circumstances occur in toil</i>
+                    <i class="fa fa-hand-o-right" style="color:red">Undertakes laborious physical exercise</i>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+
+    </div>
+
+<div class="row newproduct py-3 bg-info">
+    <div class="h1 text-center">E<b class="text-light">vents<i class="fa-fa-event"></i></b></div>
+    <div class="row">
+
+      <div class="card-group">
+  <div class="card">
+    <img src="{% static 'images/event1.jpg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">London</h5>
+      <p class="card-text">humanity trailwalker</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{% static 'images/event2.png' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">London</h5>
+      <p class="card-text">Run for Cancer People..</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{% static 'images/event3.jpg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">London</h5>
+      <p class="card-text">Mini-Golf Fundraiser</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+
+    </div>
+</div>
+
+
+ <div class="row contact bg-primary py-2" >
+     <div class="h2 text-center" style="font-size:50px;"><u></u>URGENT<b style="color:orange;">CAUSE</u></b></div>
+<div class="col-sm-1"></div>
+<div class="col-sm-10 bg-secondary" >
+    <div class="row">
+
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="{% static 'images/15.jpg'%}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h3 class="card-title">The people to help themselves</h3>
+        <p class="card-text">Etiam vitae leo diam pellentesque portaed eleifend ultricies risu, vel rutrum era commodos Praesent finib congue euismod...</p>
+      </div>
+      <div class="card-footer">
+        <center>
+            <a href="/user/donatenow/" class="btn btn-info">Donate Now</a></center>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{% static 'images/13.jpg'%}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h3 class="card-title">Childrens to get their home</h3>
+        <p class="card-text">Fusce et augue placerat, dictu velit sit amet, egestasuna. cras aliquam pretium ornar liquam metus. Aenean venenatis sodales...</p>
+      </div>
+      <div class="card-footer">
+        <center>
+            <a href="/user/donatenow/" class="btn btn-info">Donate Now</a></center>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{% static 'images/14.jpg'%}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h3 class="card-title">We encourage girls education</h3>
+        <p class="card-text">Phasellus cursus nunc arcu, eget sollicitudin milacinia tempurs. Donec ligula turpis, egestas at volutpat no liquam...</p>
+      </div>
+      <div class="card-footer">
+        <center>
+            <a href="/user/donatenow/" class="btn btn-info">Donate Now</a></center>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        </div></div></div></div>
+<div class="row contact  py-5" >
+    <div class="h2 text-center" style="font-size:50px;"><u>MEET OUR<b style="color:orange;">VOLUNTEERS</u></b></div>
+<div class="col-sm-1"></div>
+<div class="col-sm-10 bg-secondary" >
+    <div class="row">
+
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="{% static 'images/a.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+      <div class="card-body">
+        <h2 class="card-title">Mukesh Ambani</h2>
+            <p>Mukesh Dhirubhai Ambani (born 19 April 1957) is an Indian billionaire businessman, and the chairman, managing director, and largest shareholder of Reliance ...</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{% static 'images/r.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+      <div class="card-body">
+        <h2 class="card-title">Ratan Tata</h2>
+            <p>Ratan Naval Tata (born 28 December 1937) is an Indian industrialist, philanthropist, and a former chairman of Tata Sons. He was also chairman of Tata Group, ...
+Successor: Cyrus Mistry (2012); ‎Natarajan Ch...‎
+Predecessor: JRD Tata
+Occupation: Businessman; philanthropist; inve...
+Awards: Padma Vibhushan (2008); ‎Padma Bh...‎
+</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{% static 'images/g.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+      <div class="card-body">
+        <h2 class="card-title">Gautam Adani</h2>
+<p>Gautam Shantilal Adani (born 24 June 1962) is an Indian billionaire industrialist and philanthropist who is the chairman and founder of the Adani Group, ...</p>
+
+      </div>
+    </div>
+  </div>
+
+</div></div></div></div>
+
+
+<div class="row contact " style="background-color:;" >
+    <div class="h2 text-center" style="font-size:50px;"><u>Our<b style="color:orange;">Team</u></b></div>
+<div class="col-sm-1"></div>
+<div class="col-sm-10 bg-secondary" >
+    <div class="row">
+
+
+
+<div class="row">
+  <div class="column" >
+    <div class="card py-4" >
+      <img src= "{% static 'images/16.jpg' %}" alt="Jane" style="width:100% " style="min-heigth:300px;">
+      <div class="container text-center py-2">
+        <h2 >Felicity BNovak</h2>
+        <p class="title" style="color:red;">CEO & Founder</p>
+        <p>bnovak@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card  text-center py-4">
+      <img src="{% static 'images/17.jpg' %}" alt="Mike" style="width:100%" style="min-height:200px;">
+      <div class="container text-center py-2">
+        <h2>Topher Elliot</h2>
+        <p class="title" style="color:red;">Organizer</p>
+        <p>topherelliot@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card text-center py-4">
+      <img src="{% static 'images/18.jpg' %}" alt="John" style="width:100%" style="min-height:300px;">
+      <div class="container">
+        <h2>Ormonde Hirah</h2>
+        <p class="title" style="color:red">Support Staff</p>
+
+        <p>ormodehirah@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    </div></div></div>
+{% endblock %}
